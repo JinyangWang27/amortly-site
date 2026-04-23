@@ -18,13 +18,14 @@
     .feature-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
     .feature h2 { font-size: 0.9375rem; margin: 0 0 0.25rem; }
     .feature p { font-size: 0.875rem; color: #555; margin: 0; }
-    @media (max-width: 480px) { .features { grid-template-columns: 1fr; } }
+    .feature:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 0.625rem); }
+    @media (max-width: 480px) { .features { grid-template-columns: 1fr; } .feature:last-child:nth-child(odd) { width: 100%; } }
   </style>
 </head>
 <body>
   <h1>Amortly</h1>
   <p class="subtitle">Mortgage Calculator &amp; Analyser for iPhone — offline, no accounts, no tracking.</p>
-  <p>Model any mortgage scenario with precision. Compare amortisation methods. Run sensitivity analysis on rates and terms. All calculations happen on-device, instantly.</p>
+  <p>Model any mortgage scenario with precision. Compare amortisation methods, run sensitivity analysis on rates and terms, and factor in constant prepayment rates (CPR). All calculations happen on-device, instantly.</p>
   <div class="features">
     <div class="feature">
       <div class="feature-icon">🏠</div>
@@ -45,6 +46,11 @@
       <div class="feature-icon">🔒</div>
       <h2>Private &amp; Offline</h2>
       <p>Everything runs on-device. No internet, no accounts, no data leaves your phone.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💰</div>
+      <h2>Constant Prepayment Rate (CPR)</h2>
+      <p>Model regular overpayments and see exactly how they shorten your term and cut total interest.</p>
     </div>
   </div>
   <a class="badge" href="https://apps.apple.com/app/id6762079983">
